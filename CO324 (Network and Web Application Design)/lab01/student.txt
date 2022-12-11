@@ -1,0 +1,32 @@
+[
+   {
+      "given_name": "Abc",
+      "surname": "Sliva",
+      "registered_courses": [
+         "CO324",
+         "CO321"
+      ]
+   },
+   {
+      "given_name": "Xyz",
+      "surname": "Perera",
+      "registered_courses": [
+         "CO521"
+      ]
+   },
+   {
+      "given_name": "Def",
+      "surname": "Silva",
+      "registered_courses": []
+   },
+   {
+      "given_name": "Uvw",
+      "surname": "Anonymous",
+      "registered_courses": [
+         "GP106",
+         "GP108",
+         "GP109",
+         "GP110"
+      ]
+   }
+]

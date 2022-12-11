@@ -1,0 +1,22 @@
+Q2> 
+
+First find the nearest square number less than the given number (X) . That is Y. If it is equal to the number the count is one. Otherwise find the remaining sum (X-Y^2).
+
+The remaining part is futher divided in to two, if the remaining is not a square result.
+
+
+
+For Example
+
+If I take 100:
+
+10^2 = count 1
+
+9^2 + 19 => 19 can be written as 4^2+3 => 3 can be written as 1^2+2. Therefore it is not possible,.
+
+8^2 + 36 => 6^2 (count 2)
+
+like wise the algorithm can be go minus
+
+
+
