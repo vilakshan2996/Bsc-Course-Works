@@ -6,17 +6,17 @@ public class Q2
 {  
     
     
+    
+    
     public static void main(String[] args) {
         
        
         int n =10;
         // int[] key_arrays = new int[n];
         LinkedList[] nodes = new LinkedList[n];
+        HashMap<Integer,LinkedList> mapToLinkedList = new HashMap<>();
         
-        for (int i = 0; i < nodes.length; i++) {
-            nodes[i]=null;
-        }
-
+       
         KeyItem[] key_items = new KeyItem[6];
         key_items[0] = new KeyItem(33, "a");
         key_items[1] = new KeyItem(20, "b");
@@ -25,17 +25,24 @@ public class Q2
         key_items[4] = new KeyItem(23, "e");
         key_items[5] = new KeyItem(16, "f");
 
-        for (KeyItem keyItem : key_items) {
+
+       for (KeyItem keyItem : key_items) {
             int func1 = keyItem.getKey() % n;
-            nodes[func1].add(keyItem);
-            
-        }  
+            if(mapToLinkedList.get(func1)==null){
+                mapToLinkedList.put(func1,nodes[func1]);
+                nodes[func1] = new LinkedList<Integer>();
+            }
+            (nodes[func1]).add(keyItem.getKey()); 
+        }
 
-        
-    }
+
+        System.out.println("Success");
 
 
+         
+        }
     
+    }
     
 
 }
@@ -52,18 +59,5 @@ class KeyItem{
 
     int getKey(){
         return key;
-    }
-}
-
-class LinkedListNode {
-    // Declaration of Nodes
-    LinkedListNode next;
-    KeyItem data;
-  
-    // constructor
-    LinkedListNode(KeyItem data)
-    {
-        this.data = data;
-        next = null;
     }
 }
